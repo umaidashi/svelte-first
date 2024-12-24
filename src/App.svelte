@@ -31,6 +31,12 @@
     <Counter />
   </div>
 
+  <div class="card">
+    <h2>Data</h2>
+    <Todo task="Eat something"/>
+    <Todo task="Buy PlayStation5" completed={true}/>
+    <Todo {...task}/>
+  </div>
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
   </p>
