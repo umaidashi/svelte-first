@@ -37,6 +37,21 @@
     <Todo task="Buy PlayStation5" completed={true}/>
     <Todo {...task}/>
   </div>
+
+  <div class="card">
+    <h2>Loops & Conditionals</h2>
+    {#each todos as todo}
+      <Todo {...todo} />
+    {/each}
+    {#if todos.length === 0}
+      <p>All done!</p>
+    {:else if todos.length === 1}
+      <p>Almost there!</p>
+    {:else}
+      <p>Keep going!</p>
+    {/if}
+  </div>
+
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
   </p>
