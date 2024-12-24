@@ -1,13 +1,14 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-  import Todo from './lib/Todo.svelte'
+  import svelteLogo from "./assets/svelte.svg";
+  import viteLogo from "/vite.svg";
+  import Counter from "./lib/Counter.svelte";
+  import Todo from "./lib/Todo.svelte";
+  import TodoList from "./lib/TodoList.svelte";
 
   const task = {
-    task: 'Buy a new car',
-    completed: false
-  }
+    task: "Buy a new car",
+    completed: false,
+  };
 
   let todos = [
     { task: "Mow lawn", completed: false },
@@ -33,9 +34,9 @@
 
   <div class="card">
     <h2>Data</h2>
-    <Todo task="Eat something"/>
-    <Todo task="Buy PlayStation5" completed={true}/>
-    <Todo {...task}/>
+    <Todo task="Eat something" />
+    <Todo task="Buy PlayStation5" completed={true} />
+    <Todo {...task} />
   </div>
 
   <div class="card">
@@ -52,13 +53,20 @@
     {/if}
   </div>
 
+  <div class="card">
+    <h2>Events</h2>
+    <TodoList />
+  </div>
+
   <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
+    Check out <a
+      href="https://github.com/sveltejs/kit#readme"
+      target="_blank"
+      rel="noreferrer">SvelteKit</a
+    >, the official Svelte app framework powered by Vite!
   </p>
 
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
 </main>
 
 <style>

@@ -1,12 +1,15 @@
 <script>
-  export let task;
+  import { createEventDispatcher } from "svelte";
 
+  const dispatch = createEventDispatcher();
+
+  export let task;
   export let completed = false;
 
   function handleInput(event) {
-    if (event.target.checked) {
-      alert("Good job!");
-    }
+    dispatch("checked", {
+      checked: event.target.checked,
+    });
   }
 </script>
 
